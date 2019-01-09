@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LeoPetri.Common
+namespace LeoPetri.Common.Function
 {
     public static class RandomFunctions
     {

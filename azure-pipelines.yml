@@ -6,7 +6,7 @@ steps:
   inputs:
     command: pack
 
-    packagesToPack: LeoPetri.Common/LeoPetri.Common.csproj
+    packagesToPack: LeoPetri.Common.Function/LeoPetri.Common.Function.csproj
 
 
 - task: NuGetCommand@2
@@ -16,5 +16,5 @@ steps:
 
     nuGetFeedType: external
 
-    publishFeedCredentials: LeoPetri.Common
+    publishFeedCredentials: LeoPetri.Common.Function
 

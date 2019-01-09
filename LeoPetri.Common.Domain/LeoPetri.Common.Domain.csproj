@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net40;net45;net451;net452;net46;net462;netstandard2.0</TargetFrameworks>
+	<Authors>Leonardo Petri Silva</Authors>
+	<Description>Some common entities that i use.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LeoPetri.Common.Function\LeoPetri.Common.Function.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LeoPetri.Common\LeoPetri.Common.csproj" />
+    <ProjectReference Include="..\LeoPetri.Common.Function\LeoPetri.Common.Function.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LeoPetri.Common
+namespace LeoPetri.Common.Function
 {
     public enum DateIntervals
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace LeoPetri.Common
+namespace LeoPetri.Common.Function
 {
     public static class DateExtensions
     {
