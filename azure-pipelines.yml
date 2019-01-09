@@ -1,5 +1,9 @@
 queue:
   name: Hosted VS2017
+branches:
+  except:
+    - develop
+    - feature/*
 steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack Common.Function'
