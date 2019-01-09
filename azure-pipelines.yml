@@ -2,19 +2,33 @@ queue:
   name: Hosted VS2017
 steps:
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet pack'
+  displayName: 'dotnet pack Common.Function'
   inputs:
     command: pack
 
-    packagesToPack: LeoPetri.Common/LeoPetri.Common.csproj
+    packagesToPack: LeoPetri.Common.Function/LeoPetri.Common.Function.csproj
 
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet pack Common.Domain'
+  inputs:
+    command: pack
+
+    packagesToPack: LeoPetri.Common.Domain/LeoPetri.Common.Domain.csproj
 
 - task: NuGetCommand@2
-  displayName: 'NuGet push'
+  displayName: 'NuGet push Common.Function'
+  inputs:
+    command: push
+
+    nuGetFeedType: external
+
+    publishFeedCredentials: LeoPetri.Common.Function
+
+- task: NuGetCommand@2
+  displayName: 'NuGet push Common.Domain'
   inputs:
     command: push
 
     nuGetFeedType: external
 
     publishFeedCredentials: LeoPetri.Common
-
