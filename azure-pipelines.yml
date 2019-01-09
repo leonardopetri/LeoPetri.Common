@@ -22,7 +22,7 @@ steps:
 
     nuGetFeedType: external
 
-    publishFeedCredentials: LeoPetri.Common
+    publishFeedCredentials: LeoPetri.Common.Function
 
 - task: NuGetCommand@2
   displayName: 'NuGet push Common.Domain'

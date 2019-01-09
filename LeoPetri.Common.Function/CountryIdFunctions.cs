@@ -1,6 +1,6 @@
-﻿namespace LeoPetri.Common
+﻿namespace LeoPetri.Common.Function
 {
-    public static class CountryIdentityFunctions
+    public static class CountryIdFunctions
     {
         private static bool IsCpfValid(string cpf)
         {
@@ -117,57 +117,22 @@
 
         }
 
-        public static bool IsValid(string countryIdentity, PersonTypes personType)
+        public static string ToCnpjFormat(string cnpj)
         {
-            return personType == PersonTypes.LegalEntity ? IsCnpjValid(countryIdentity) : IsCpfValid(countryIdentity);
+            return ToCnpjFormat(long.Parse(cnpj.NumbersOnly()));
         }
 
-        public static bool IsValid(long countryIdentity, PersonTypes personType)
+        public static string ToCpfFormat(string cpf)
         {
-            return personType == PersonTypes.LegalEntity ? IsCnpjValid(countryIdentity.ToString()) : IsCpfValid(countryIdentity.ToString());
+            return ToCpfFormat(long.Parse(cpf.NumbersOnly()));
         }
 
-        public static bool IsValid(string countryIdentity, int personType)
-        {
-            return IsValid(countryIdentity, (PersonTypes)personType);
-        }
-
-        public static bool IsValid(long countryIdentity, int personType)
-        {
-            return IsValid(countryIdentity, (PersonTypes)personType);
-        }
-
-        public static string Format(long countryIdentity, PersonTypes personType)
-        {
-            return personType == PersonTypes.NaturalPerson ? FormatCpf(countryIdentity) : FormatCnpj(countryIdentity);
-        }
-
-        public static string Format(string countryIdentity, PersonTypes personType)
-        {
-            if (string.IsNullOrWhiteSpace(countryIdentity))
-                return string.Empty;
-
-            var result = long.Parse(countryIdentity.NumbersOnly());
-
-            return personType == PersonTypes.NaturalPerson ? FormatCpf(result) : FormatCnpj(result);
-        }
-
-        public static string Format(long countryIdentity, int personType)
-        {
-            return (PersonTypes)personType == PersonTypes.NaturalPerson ? FormatCpf(countryIdentity) : FormatCnpj(countryIdentity);
-        }
-
-        public static string Format(string countryIdentity, int personType)
-        {
-            return Format(countryIdentity, (PersonTypes) personType);
-        }
-
-        private static string FormatCnpj(long cnpj)
+        public static string ToCnpjFormat(long cnpj)
         {
             return cnpj.ToString(@"00\.000\.000\/0000\-00");
         }
 
-        private static string FormatCpf(long cpf)
+        public static string ToCpfFormat(long cpf)
         {
             return cpf.ToString(@"000\.000\.000\-00");
         }

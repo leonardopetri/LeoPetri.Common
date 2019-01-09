@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common", "LeoPetri.Common\LeoPetri.Common.csproj", "{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Function", "LeoPetri.Common.Function\LeoPetri.Common.Function.csproj", "{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeoPetri.Common.UnitTest", "LeoPetri.Common.UnitTest\LeoPetri.Common.UnitTest.csproj", "{DCDA1409-630F-48B5-90AB-838144A6DAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.UnitTest", "LeoPetri.Common.UnitTest\LeoPetri.Common.UnitTest.csproj", "{DCDA1409-630F-48B5-90AB-838144A6DAE5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Domain", "LeoPetri.Common.Domain\LeoPetri.Common.Domain.csproj", "{45770D2C-9D2D-403C-8B6D-7DC89EC80C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45770D2C-9D2D-403C-8B6D-7DC89EC80C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45770D2C-9D2D-403C-8B6D-7DC89EC80C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45770D2C-9D2D-403C-8B6D-7DC89EC80C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45770D2C-9D2D-403C-8B6D-7DC89EC80C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

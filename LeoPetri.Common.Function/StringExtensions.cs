@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using System.Linq;
 
-namespace LeoPetri.Common
+namespace LeoPetri.Common.Function
 {
     public static class StringExtensions
     {
@@ -71,6 +71,7 @@ namespace LeoPetri.Common
                 case "SIM":
                 case "S":
                 case "YES":
+                case "Y":
                 case "VERDADEIRO":
                 case "V":
                 case "1":
