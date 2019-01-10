@@ -17,6 +17,7 @@ namespace LeoPetri.Common.Domain
             }
 
             var atIndex = address.IndexOf("@");
+            this.Address = address;
             this.LocalPart = address.Substring(0, address.IndexOf("@"));
             this.Domain = address.Substring(address.IndexOf("@") + 1);
         }
