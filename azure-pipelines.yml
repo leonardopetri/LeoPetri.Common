@@ -1,5 +1,7 @@
 variables:
-  packageVersion: 2.0.$[counter('versioncounter', 0)]
+  PackageVersion: '2.0.0'
+  VersionBuildNumber: $[counter('$(PackageVersion)', 1)]
+  ReleaseVersion: $(PackageVersion).$(VersionBuildNumber)
 
 queue:
   name: Hosted VS2017
@@ -14,7 +16,7 @@ steps:
     command: pack
     packagesToPack: LeoPetri.Common.Function/LeoPetri.Common.Function.csproj
     versioningScheme: byEnvVar
-    versionEnvVar: packageVersion
+    versionEnvVar: ReleaseVersion
 
 - task: NuGetCommand@2
   displayName: 'NuGet push Common.Function'
@@ -30,7 +32,7 @@ steps:
     command: pack
     packagesToPack: LeoPetri.Common.Domain/LeoPetri.Common.Domain.csproj
     versioningScheme: byEnvVar
-    versionEnvVar: packageVersion
+    versionEnvVar: ReleaseVersion
     
 - task: NuGetCommand@2
   displayName: 'NuGet push Common.Domain'
