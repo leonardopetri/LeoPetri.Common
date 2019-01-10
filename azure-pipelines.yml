@@ -18,14 +18,6 @@ steps:
     versioningScheme: byEnvVar
     versionEnvVar: PreReleaseVersion
 
-- task: NuGetCommand@2
-  displayName: 'NuGet push Common.Function'
-  continueOnError: true
-  inputs:
-    command: push
-    nuGetFeedType: external
-    publishFeedCredentials: LeoPetri.Common
-
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack Common.Domain'
   inputs:
@@ -35,7 +27,7 @@ steps:
     versionEnvVar: PreReleaseVersion
     
 - task: NuGetCommand@2
-  displayName: 'NuGet push Common.Domain'
+  displayName: 'NuGet push Common'
   continueOnError: true
   inputs:
     command: push
