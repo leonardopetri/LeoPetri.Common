@@ -1,38 +1,42 @@
+variables:
+  version: 2.0.$[counter('versioncounter', 0)]
+
 queue:
   name: Hosted VS2017
+
 branches:
-  except:
-    - develop
-    - feature/*
+  only:
+    - master
+
 steps:
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack Common.Function'
   inputs:
     command: pack
-
     packagesToPack: LeoPetri.Common.Function/LeoPetri.Common.Function.csproj
+    versioningScheme: byEnvVar
+    versionEnvVar: $(version)
+
+- task: NuGetCommand@2
+  displayName: 'NuGet push Common.Function'
+  continueOnError: true
+  inputs:
+    command: push
+    nuGetFeedType: external
+    publishFeedCredentials: LeoPetri.Common
 
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack Common.Domain'
   inputs:
     command: pack
-
     packagesToPack: LeoPetri.Common.Domain/LeoPetri.Common.Domain.csproj
-
-- task: NuGetCommand@2
-  displayName: 'NuGet push Common.Function'
-  inputs:
-    command: push
-
-    nuGetFeedType: external
-
-    publishFeedCredentials: LeoPetri.Common
-
+    versioningScheme: byEnvVar
+    versionEnvVar: $(version)
+    
 - task: NuGetCommand@2
   displayName: 'NuGet push Common.Domain'
+  continueOnError: true
   inputs:
     command: push
-
     nuGetFeedType: external
-
     publishFeedCredentials: LeoPetri.Common
