@@ -55,7 +55,7 @@ namespace LeoPetri.Common.UnitTest
         public void UpperNameFirstLetterTest()
         {
             var str = @"leonardo de petri da silva";
-            str = str.ToUpperNamesFirstLetter();
+            str = str.ToUpperFirstLetterName();
 
             Assert.Equal("Leonardo de Petri da Silva", str);
         }
