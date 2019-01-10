@@ -1,5 +1,5 @@
 variables:
-  packageVersion: 2.0.$[counter('versioncounter')]
+  packageVersion: 2.0.$[counter('versioncounter', 0)]
 
 queue:
   name: Hosted VS2017
