@@ -2,9 +2,9 @@ using System.Text.RegularExpressions;
 using LeoPetri.Common.Function;
 using Xunit;
 
-namespace LeoPetri.Common.UnitTest
+namespace LeoPetri.Common.Function.UnitTest
 {
-    public class StringExtensionTest
+    public class StringExtensionsTest
     {
         [Fact]
         public void NumbersOnlyTest()

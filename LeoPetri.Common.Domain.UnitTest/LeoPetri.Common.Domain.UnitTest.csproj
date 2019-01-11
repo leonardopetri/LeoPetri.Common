@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeoPetri.Common.Domain\LeoPetri.Common.Domain.csproj" />
+    <ProjectReference Include="..\LeoPetri.Common.Function\LeoPetri.Common.Function.csproj" />
   </ItemGroup>
 
 </Project>

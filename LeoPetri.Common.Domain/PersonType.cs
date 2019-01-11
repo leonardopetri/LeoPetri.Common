@@ -2,7 +2,7 @@
 
 namespace LeoPetri.Common.Domain
 {
-    public enum PersonTypes
+    public enum PersonType
     {
         [DefaultValue("Pessoa Física")]
         NaturalPerson = 1,
