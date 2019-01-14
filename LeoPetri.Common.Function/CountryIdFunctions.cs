@@ -2,7 +2,7 @@
 {
     public static class CountryIdFunctions
     {
-        private static bool IsCpfValid(string cpf)
+        public static bool IsCpfValid(string cpf)
         {
             if (string.IsNullOrWhiteSpace(cpf))
                 return false;
@@ -60,7 +60,7 @@
             return true;
         }
 
-        private static bool IsCnpjValid(string cnpj)
+        public static bool IsCnpjValid(string cnpj)
         {
             if (string.IsNullOrWhiteSpace(cnpj))
                 return false;

@@ -46,7 +46,7 @@ namespace LeoPetri.Common.Function
             return string.Join(" ", array);
         }
 
-        public static string ToUpperNamesFirstLetter(this string str)
+        public static string ToUpperFirstLetterName(this string str)
         {
             var array = str.ToLower().Trim().Split(' ');
 

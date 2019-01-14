@@ -1,10 +1,9 @@
 using System.Text.RegularExpressions;
-using LeoPetri.Common.Function;
 using Xunit;
 
-namespace LeoPetri.Common.UnitTest
+namespace LeoPetri.Common.Function.UnitTest
 {
-    public class StringExtensionTest
+    public class StringExtensionsTest
     {
         [Fact]
         public void NumbersOnlyTest()
@@ -55,7 +54,7 @@ namespace LeoPetri.Common.UnitTest
         public void UpperNameFirstLetterTest()
         {
             var str = @"leonardo de petri da silva";
-            str = str.ToUpperNamesFirstLetter();
+            str = str.ToUpperFirstLetterName();
 
             Assert.Equal("Leonardo de Petri da Silva", str);
         }
@@ -63,6 +62,8 @@ namespace LeoPetri.Common.UnitTest
         [Theory]
         [InlineData("sim")]
         [InlineData("s")]
+        [InlineData("yes")]
+        [InlineData("y")]
         [InlineData("true")]
         [InlineData("verdadeiro")]
         [InlineData("v")]
@@ -77,6 +78,7 @@ namespace LeoPetri.Common.UnitTest
         [Theory]
         [InlineData("nao")]
         [InlineData("não")]
+        [InlineData("no")]
         [InlineData("false")]
         [InlineData("n")]
         [InlineData("falso")]

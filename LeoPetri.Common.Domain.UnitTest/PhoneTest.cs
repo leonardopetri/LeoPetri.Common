@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LeoPetri.Common.UnitTest
+namespace LeoPetri.Common.Domain.UnitTest
 {
-    class AddressFunctionsTest
+    class PhoneTest
     {
     }
 }
