@@ -1,5 +1,4 @@
 using System.Text.RegularExpressions;
-using LeoPetri.Common.Function;
 using Xunit;
 
 namespace LeoPetri.Common.Function.UnitTest

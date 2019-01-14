@@ -5,33 +5,33 @@ namespace LeoPetri.Common.Function
 {
     public static class DateExtensions
     {
-        public static T DateDiff<T>(this DateTime fromDate, DateIntervals interval, DateTime toDate) where T: struct
+        public static T DateDiff<T>(this DateTime fromDate, DateInterval interval, DateTime toDate) where T: struct
         {
             double difference;
             switch (interval)
             {
-                case DateIntervals.Day:
+                case DateInterval.Day:
                     difference = DateDiffDay(fromDate, toDate);
                     break;
-                case DateIntervals.Month:
+                case DateInterval.Month:
                     difference = DateDiffMonth(fromDate, toDate);
                     break;
-                case DateIntervals.Year:
+                case DateInterval.Year:
                     difference = DateDiffYear(fromDate, toDate);
                     break;
-                case DateIntervals.Hour:
+                case DateInterval.Hour:
                     difference = DateDiffHour(fromDate, toDate);
                     break;
-                case DateIntervals.Minute:
+                case DateInterval.Minute:
                     difference = DateDiffMinute(fromDate, toDate);
                     break;
-                case DateIntervals.Second:
+                case DateInterval.Second:
                     difference = DateDiffSecond(fromDate, toDate);
                     break;
-                case DateIntervals.Millisecond:
+                case DateInterval.Millisecond:
                     difference = DateDiffMillisecond(fromDate, toDate);
                     break;
-                case DateIntervals.Tick:
+                case DateInterval.Tick:
                     difference = DateDiffTick(fromDate, toDate);
                     break;
                 default:

@@ -2,7 +2,7 @@
 
 namespace LeoPetri.Common.Function
 {
-    public enum DateIntervals
+    public enum DateInterval
     {
         [DefaultValue("Dia")]
         Day = 1,

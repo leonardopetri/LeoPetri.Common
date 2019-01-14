@@ -3,7 +3,9 @@
   <PropertyGroup>
 	<TargetFrameworks>net40;net45;net451;net452;net46;net462;netstandard2.0</TargetFrameworks>
 	<Authors>Leonardo Petri Silva</Authors>
-	<Description>Some common functions and extensions that i use.</Description>
+	<Description>Some common functions and extensions that i use.
+
+https://github.com/leonardopetri/Miscellaneous-Common</Description>
 	<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	<Version>2.0.0</Version>
   </PropertyGroup>
