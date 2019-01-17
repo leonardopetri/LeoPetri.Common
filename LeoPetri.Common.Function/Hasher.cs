@@ -10,7 +10,7 @@ namespace LeoPetri.Common.Function
         {
             using (var sha512 = SHA512.Create())
             {
-                var hashedBytes = sha512.ComputeHash(Encoding.ASCII.GetBytes(value + " | " + (guid.HasValue ? guid.Value.ToString() : string.Empty)));
+                var hashedBytes = sha512.ComputeHash(Encoding.ASCII.GetBytes(value + (guid.HasValue ? " | " + guid.Value.ToString() : string.Empty)));
 
                 return Convert.ToBase64String(hashedBytes, 0, hashedBytes.Length);
             }

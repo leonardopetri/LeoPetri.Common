@@ -5,6 +5,7 @@ namespace LeoPetri.Common.Function
     public static class AddressFunctions
     {
         public static string ToBrazilianFormat(
+           CaseFormat caseFormat,
            string street,
            int? number,
            string complement,
@@ -13,6 +14,22 @@ namespace LeoPetri.Common.Function
            string state,
            string zipCode)
         {
+
+            if (caseFormat == CaseFormat.ToNameCase)
+            {
+                street = street.ToUpperFirstLetterName();
+                complement = complement.ToUpperFirstLetterName();
+                district = district.ToUpperFirstLetterName();
+                city = city.ToUpperFirstLetterName();
+
+                if (state.Length == 2)
+                    state = state.ToUpper();
+                else
+                    state = state.ToUpperFirstLetterName();
+
+                zipCode = zipCode.ToUpperFirstLetterName();
+            }
+
             var sb = new StringBuilder();
 
             if (!string.IsNullOrWhiteSpace(street))
@@ -64,7 +81,10 @@ namespace LeoPetri.Common.Function
             {
                 if (!string.IsNullOrWhiteSpace(sb.ToString()))
                 {
-                    sb.Append(" - ");
+                    if (string.IsNullOrWhiteSpace(city))
+                        sb.Append(", ");
+                    else
+                        sb.Append(" - ");
                 }
 
                 sb.Append(state);
@@ -79,8 +99,15 @@ namespace LeoPetri.Common.Function
 
                 sb.Append(long.Parse(zipCode.NumbersOnly()).ToString("00000-000"));
             }
-            
-            return sb.ToString();
+
+            var addressStr = sb.ToString();
+
+            if (caseFormat == CaseFormat.ToLower)
+                addressStr = addressStr.ToLower();
+            else if (caseFormat == CaseFormat.ToUpper)
+                addressStr = addressStr.ToUpper();
+
+            return addressStr;
         }
     }
 }

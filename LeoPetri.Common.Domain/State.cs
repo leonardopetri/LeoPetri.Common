@@ -18,5 +18,18 @@ namespace LeoPetri.Common.Domain
             get { return _abbreviation; }
             set { _abbreviation = value.ToUpper(); }
         }
+
+        public State() { }
+
+        public State(string abbreviation)
+        {
+            this.Abbreviation = abbreviation;
+        }
+
+        public State(string name, string abbreviation)
+        {
+            this.Name = name;
+            this.Abbreviation = abbreviation;
+        }
     }
 }

@@ -2,21 +2,20 @@
 
 namespace LeoPetri.Common.Function
 {
-    public static class RandomFunctions
+    public static class RandomExtensions
     {
         public static string NextCpf(this Random rnd)
         {
             var n = 9;
-            var r = new Random();
-            var n1 = r.Next(0, n);
-            var n2 = r.Next(0, n);
-            var n3 = r.Next(0, n);
-            var n4 = r.Next(0, n);
-            var n5 = r.Next(0, n);
-            var n6 = r.Next(0, n);
-            var n7 = r.Next(0, n);
-            var n8 = r.Next(0, n);
-            var n9 = r.Next(0, n);
+            var n1 = rnd.Next(0, n);
+            var n2 = rnd.Next(0, n);
+            var n3 = rnd.Next(0, n);
+            var n4 = rnd.Next(0, n);
+            var n5 = rnd.Next(0, n);
+            var n6 = rnd.Next(0, n);
+            var n7 = rnd.Next(0, n);
+            var n8 = rnd.Next(0, n);
+            var n9 = rnd.Next(0, n);
             var d1 = n9 * 2 + n8 * 3 + n7 * 4 + n6 * 5 + n5 * 6 + n4 * 7 + n3 * 8 + n2 * 9 + n1 * 10;
             d1 = 11 - d1 % 11;
             if (d1 >= 10) d1 = 0;
@@ -42,16 +41,14 @@ namespace LeoPetri.Common.Function
         {
             var n = 9;
 
-            var r = new Random();
-
-            var n1 = r.Next(0, n);
-            var n2 = r.Next(0, n);
-            var n3 = r.Next(0, n);
-            var n4 = r.Next(0, n);
-            var n5 = r.Next(0, n);
-            var n6 = r.Next(0, n);
-            var n7 = r.Next(0, n);
-            var n8 = r.Next(0, n);
+            var n1 = rnd.Next(0, n);
+            var n2 = rnd.Next(0, n);
+            var n3 = rnd.Next(0, n);
+            var n4 = rnd.Next(0, n);
+            var n5 = rnd.Next(0, n);
+            var n6 = rnd.Next(0, n);
+            var n7 = rnd.Next(0, n);
+            var n8 = rnd.Next(0, n);
             var n9 = 0; //r.Next(0,n);
             var n10 = 0; //r.Next(0,n);
             var n11 = 0; //r.Next(0,n);
