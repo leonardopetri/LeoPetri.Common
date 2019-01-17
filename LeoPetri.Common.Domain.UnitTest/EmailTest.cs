@@ -20,7 +20,7 @@ namespace LeoPetri.Common.Domain.UnitTest
         {
             var exception = Assert.Throws<FormatException>(() => new Email("leonardopetrigmail.com"));
 
-            Assert.Equal("Not a valid email address format.", exception.Message);
+            Assert.Equal("Not a valid email address.", exception.Message);
         }
     }
 }

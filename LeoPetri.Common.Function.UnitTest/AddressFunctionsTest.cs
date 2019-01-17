@@ -37,7 +37,7 @@ namespace LeoPetri.Common.Function.UnitTest
            string zipCode,
            string value)
         {
-            var formatedValue = AddressFunctions.ToBrazilianFormat(caseFormat, street, number, complement, district, city, state, zipCode);
+            var formatedValue = AddressFunctions.ToBrazilianFormat(street, number, complement, district, city, state, zipCode, caseFormat);
 
             Assert.Equal(value, formatedValue);
         }

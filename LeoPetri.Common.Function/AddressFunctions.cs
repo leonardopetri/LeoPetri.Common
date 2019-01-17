@@ -5,14 +5,14 @@ namespace LeoPetri.Common.Function
     public static class AddressFunctions
     {
         public static string ToBrazilianFormat(
-           CaseFormat caseFormat,
            string street,
            int? number,
            string complement,
            string district,
            string city,
            string state,
-           string zipCode)
+           string zipCode,
+           CaseFormat caseFormat = CaseFormat.None)
         {
 
             if (caseFormat == CaseFormat.ToNameCase)
