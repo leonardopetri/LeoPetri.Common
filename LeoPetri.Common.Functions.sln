@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Functions", "LeoPetri.Common.Functions\LeoPetri.Common.Functions.csproj", "{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Functions.UnitTest", "LeoPetri.Common.Functions.UnitTest\LeoPetri.Common.Functions.UnitTest.csproj", "{DCDA1409-630F-48B5-90AB-838144A6DAE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDA1409-630F-48B5-90AB-838144A6DAE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3170566F-C881-47B5-8214-2C93A1E72D94}
+	EndGlobalSection
+EndGlobal
