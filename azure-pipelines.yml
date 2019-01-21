@@ -10,11 +10,24 @@ trigger:
   - master
 
 steps:
+- script: |
+    dotnet build
+    dotnet test tests/LeoPetri.Common.Functions.UnitTest --logger trx
+
+  displayName: 'build and test LeoPetri.Common.Functions'
+  
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  displayName: 'publish tests'
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '**/**/*.trx'
+    
 - task: DotNetCoreCLI@2
   displayName: 'dotnet pack Common.Functions'
   inputs:
     command: pack
-    packagesToPack: LeoPetri.Common.Functions/LeoPetri.Common.Functions.csproj
+    packagesToPack: src/LeoPetri.Common.Functions/LeoPetri.Common.Functions.csproj
     versioningScheme: byEnvVar
     versionEnvVar: PreReleaseVersion
     

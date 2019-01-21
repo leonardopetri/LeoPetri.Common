@@ -3,7 +3,7 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class DateExtensionsTest
+    public class DateExtensionsShould
     {
         [Theory]
         [InlineData("2019-01-17", "2019-01-20", 3)]

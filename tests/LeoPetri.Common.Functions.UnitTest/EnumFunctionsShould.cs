@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class EnumFunctionsTest
+    public class EnumFunctionsShould
     {
         public enum TestEnum
         {
@@ -21,7 +21,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("Enum1Default", TestEnum.Enum1)]
         [InlineData("Enum2Default", TestEnum.Enum2)]
         [InlineData("Enum3", TestEnum.Enum3)]
-        public void ToEnumFromDafaultValueTest(string dafaultValue, TestEnum testEnumExpected)
+        public void BeParsedToEnumFromDafaultValue(string dafaultValue, TestEnum testEnumExpected)
         {
             Assert.Equal(testEnumExpected, EnumFunctions.ToEnumFromDefaulValue<TestEnum>(dafaultValue));
         }
@@ -30,7 +30,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("Enum1Description", TestEnum.Enum1)]
         [InlineData("Enum2Description", TestEnum.Enum2)]
         [InlineData("Enum3", TestEnum.Enum3)]
-        public void ToEnumFromDescriptionTest(string description, TestEnum testEnumExpected)
+        public void BeParsedToEnumFromDescription(string description, TestEnum testEnumExpected)
         {
             Assert.Equal(testEnumExpected, EnumFunctions.ToEnumFromDescription<TestEnum>(description));
         }
@@ -39,7 +39,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("Enum4Default")]
         [InlineData("Enum5Default")]
         [InlineData("Enum")]
-        public void ToEnumFromDafaultValueErrorTest(string dafaultValue)
+        public void NotBeParsedToEnumFromDafaultValue(string dafaultValue)
         {
             var exception = Assert.Throws<ArgumentException>(() => EnumFunctions.ToEnumFromDefaulValue<TestEnum>(dafaultValue));
             Assert.Equal("Default value does not match any enum value.", exception.Message);
@@ -49,7 +49,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("Enum6Description")]
         [InlineData("Enum5Description")]
         [InlineData("Enum")]
-        public void ToEnumFromDescriptionErrorTest(string description)
+        public void NotBeParsedToEnumFromDescription(string description)
         {
             var exception = Assert.Throws<ArgumentException>(() => EnumFunctions.ToEnumFromDescription<TestEnum>(description));
             Assert.Equal("Description does not match any enum value.", exception.Message);

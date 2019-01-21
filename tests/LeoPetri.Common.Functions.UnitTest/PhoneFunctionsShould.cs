@@ -5,12 +5,12 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class PhoneFunctionsTest
+    public class PhoneFunctionsShould
     {
         [Theory]
         [InlineData(1119282871, "(11) 1928-2871")]
         [InlineData(11192822871, "(11) 19282-2871")]
-        public void ToBrazilianFormatLongTest(ulong number, string formatedNumber)
+        public void BeParsedToBrazilianFormatFromLongNumber(ulong number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToBrazilianFormat(number);
 
@@ -20,7 +20,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [Theory]
         [InlineData("1119282871", "(11) 1928-2871")]
         [InlineData("11192822871", "(11) 19282-2871")]
-        public void ToBrazilianFormatStringTest(string number, string formatedNumber)
+        public void BeParsedToBrazilianFormatFromStringNumber(string number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToBrazilianFormat(number);
 
@@ -30,7 +30,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [Theory]
         [InlineData(551119282871, "+55 (11) 1928-2871")]
         [InlineData(5511192822871, "+55 (11) 19282-2871")]
-        public void ToBrazilianFormatWithDDILongTest(ulong number, string formatedNumber)
+        public void BeParsedToBrazilianFormatFromLongNumberWithDDI(ulong number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToBrazilianFormatWithDdi(number);
 
@@ -41,7 +41,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("551119282871", "+55 (11) 1928-2871")]
         [InlineData("5511192822871", "+55 (11) 19282-2871")]
         [InlineData("005511192822871", "+55 (11) 19282-2871")]
-        public void ToBrazilianFormatWithDDIStringTest(string number, string formatedNumber)
+        public void BeParsedToBrazilianFormatFromStringNumberWithDDI(string number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToBrazilianFormatWithDdi(number);
 
@@ -51,7 +51,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [Theory]
         [InlineData(1119282871, "(111) 928-2871")]
         [InlineData(1119222871, "(111) 922-2871")]
-        public void ToNorthAmericanFormatLongTest(ulong number, string formatedNumber)
+        public void BeParsedToNorthAmericanFormatFromLongNumber(ulong number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToNorthAmericanFormat(number);
 
@@ -61,7 +61,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [Theory]
         [InlineData("1119282871", "(111) 928-2871")]
         [InlineData("1119222871", "(111) 922-2871")]
-        public void ToNorthAmericanFormatStringTest(string number, string formatedNumber)
+        public void BeParsedToNorthAmericanFormatFromStringNumber(string number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToNorthAmericanFormat(number);
 
@@ -71,7 +71,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [Theory]
         [InlineData(11119282871, "+1 (111) 928-2871")]
         [InlineData(11119222871, "+1 (111) 922-2871")]
-        public void ToNorthAmericanFormatWithDDILongTest(ulong number, string formatedNumber)
+        public void BeParsedToNorthAmericanFormatFromLongNumberWithDDI(ulong number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToNorthAmericanFormatWithDdi(number);
 
@@ -82,7 +82,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("11119282871", "+1 (111) 928-2871")]
         [InlineData("11119222871", "+1 (111) 922-2871")]
         [InlineData("0011119222871", "+1 (111) 922-2871")]
-        public void ToNorthAmericanFormatWithDDIStringTest(string number, string formatedNumber)
+        public void BeParsedToNorthAmericanFormatFromStringNumberWithDDI(string number, string formatedNumber)
         {
             var formated = PhoneFunctions.ToNorthAmericanFormatWithDdi(number);
 

@@ -3,7 +3,7 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class EnumExtensionsTest
+    public class EnumExtensionsShould
     {
         public enum TestEnum
         {
@@ -20,7 +20,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData(TestEnum.Enum1, "Enum1Default")]
         [InlineData(TestEnum.Enum2, "Enum2Default")]
         [InlineData(TestEnum.Enum3, "Enum3")]
-        public void EnumGetDafaultValueTest(TestEnum testEnum, string dafaultValueExpected)
+        public void GetDafaultValue(TestEnum testEnum, string dafaultValueExpected)
         {
             Assert.Equal(dafaultValueExpected, testEnum.GetDefaultValue());
         }
@@ -29,7 +29,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData(TestEnum.Enum1, "Enum1Description")]
         [InlineData(TestEnum.Enum2, "Enum2Description")]
         [InlineData(TestEnum.Enum3, "Enum3")]
-        public void EnumGetDescriptionTest(TestEnum testEnum, string descriptionExpected)
+        public void GetDescription(TestEnum testEnum, string descriptionExpected)
         {
             Assert.Equal(descriptionExpected, testEnum.GetDescription());
         }

@@ -3,10 +3,10 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class StringExtensionsTest
+    public class StringExtensionsShould
     {
         [Fact]
-        public void NumbersOnlyTest()
+        public void HaveNumbersOnly()
         {
             var str = @"Leonardo (011)96565-9927/\_/\_38!$#*%¨$()S  \|*-+.";
             str = str.NumbersOnly();
@@ -15,7 +15,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         }
 
         [Fact]
-        public void TextOnlyTest()
+        public void HaveTextOnly()
         {
             var str = @"Leonardo (011)96565-9927/\_/\_38!$#*%¨$()S  \|*-+.";
             str = str.TextOnly();
@@ -24,7 +24,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         }
 
         [Fact]
-        public void NoSpecialCharTest()
+        public void HaveNoSpecialChar()
         {
             var str = @"Leonardo (011)96565-9927/\_/\_38!$#*%¨$()S  \|*-+.";
             str = str.NoSpecialChar();
@@ -33,7 +33,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         }
 
         [Fact]
-        public void FirstWordTest()
+        public void HaveFirstWord()
         {
             var str = @"Leonardo Petri Silva";
             str = str.FirstWord();
@@ -42,7 +42,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         }
 
         [Fact]
-        public void UpperFirstLetterTest()
+        public void HaveUpperFirstLetter()
         {
             var str = @"leonardo petri silva";
             str = str.ToUpperFirstLetter();
@@ -51,7 +51,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         }
 
         [Fact]
-        public void UpperNameFirstLetterTest()
+        public void HaveUpperNameFirstLetter()
         {
             var str = @"leonardo de petri da silva";
             str = str.ToUpperFirstLetterName();
@@ -68,7 +68,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("verdadeiro")]
         [InlineData("v")]
         [InlineData("1")]
-        public void ToBooleanTrueTest(string str)
+        public void BeParsedToBooleanAsTrue(string str)
         {
             var boolean = str.ToBoolean();
 
@@ -84,7 +84,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("falso")]
         [InlineData("f")]
         [InlineData("0")]
-        public void ToBooleanFalseTest(string str)
+        public void BeParsedToBooleanAsFalse(string str)
         {
             var boolean = str.ToBoolean();
 

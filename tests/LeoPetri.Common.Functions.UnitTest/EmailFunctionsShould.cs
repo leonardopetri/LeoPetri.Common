@@ -2,13 +2,13 @@
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class EmailFunctionsTest
+    public class EmailFunctionsShould
     {
         [Theory]
         [InlineData("leonardo.petri@gmail.com")]
         [InlineData("leonardopetri@gmail.com")]
         [InlineData("leonardo@com.com")]
-        public void EmailIsValidTest(string email)
+        public void BeValid(string email)
         {
             var valid = EmailFunctions.IsValid(email);
 
@@ -22,7 +22,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("leonardo@com")]
         [InlineData("leonardo@.com")]
         [InlineData("leonardo@com.")]
-        public void EmailIsNotValidTest(string email)
+        public void BeInvalid(string email)
         {
             var notValid = EmailFunctions.IsValid(email);
 

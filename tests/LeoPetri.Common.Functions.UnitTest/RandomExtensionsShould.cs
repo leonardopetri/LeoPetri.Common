@@ -5,16 +5,16 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class RandomExtensionsTest
+    public class RandomExtensionsShould
     {
         [Fact]
-        public void NextCpfTest()
+        public void HaveNextValidCpf()
         {
             Assert.True(CountryIdFunctions.IsCpfValid(new Random().NextCpf()));
         }
 
         [Fact]
-        public void NextCnpjTest()
+        public void HaveNextValidCnpj()
         {
             Assert.True(CountryIdFunctions.IsCnpjValid(new Random().NextCnpj()));
         }

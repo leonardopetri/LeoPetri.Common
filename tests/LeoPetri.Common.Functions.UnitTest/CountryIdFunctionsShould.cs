@@ -5,7 +5,7 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class CountryIdFunctionsTest
+    public class CountryIdFunctionsShould
     {
         [Theory]
         [InlineData("018.603.096-74")]
@@ -16,7 +16,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("198.263.953-90")]
         [InlineData("455.395.847-32")]
         [InlineData("671.285.638-81")]
-        public void IsCpfValidTest(string cpf)
+        public void BeValidCpf(string cpf)
         {
             Assert.True(CountryIdFunctions.IsCpfValid(cpf));
         }
@@ -27,7 +27,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("198.263.53-90")]
         [InlineData("455.396.847-32")]
         [InlineData("671.285.638-1")]
-        public void IsCpfInvalidTest(string cpf)
+        public void BeInvalidCpf(string cpf)
         {
             Assert.False(CountryIdFunctions.IsCpfValid(cpf));
         }
@@ -47,7 +47,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("67.488.702/0001-37")]
         [InlineData("93.641.881/0001-00")]
         [InlineData("05.968.349/0001-35")]
-        public void IsCnpjValidTest(string cnpj)
+        public void BeValidCnpj(string cnpj)
         {
             Assert.True(CountryIdFunctions.IsCnpjValid(cnpj));
         }
@@ -58,7 +58,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("67.488.502/0001-37")]
         [InlineData("93.641.881/0001-0")]
         [InlineData("05.968.349/0001-65")]
-        public void IsCnpjInvalidTest(string cnpj)
+        public void BeInvalidCnpj(string cnpj)
         {
             Assert.False(CountryIdFunctions.IsCnpjValid(cnpj));
         }
