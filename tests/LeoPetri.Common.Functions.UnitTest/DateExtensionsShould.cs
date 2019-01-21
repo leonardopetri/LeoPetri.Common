@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
@@ -12,7 +13,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:18:32", 3)]
         public void DateDiffByDaysTest(string fromDate, string toDate, int diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Day, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Day, DateTime.Parse(toDate)));
         }
 
         [Theory]
@@ -22,7 +23,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:18:32", 71)]
         public void DateDiffByHoursTest(string fromDate, string toDate, int diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Hour, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Hour, DateTime.Parse(toDate)));
         }
 
 
@@ -35,7 +36,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:17:31", 4259)]
         public void DateDiffByMinutesTest(string fromDate, string toDate, int diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Minute, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Minute, DateTime.Parse(toDate)));
         }
 
         [Theory]
@@ -47,7 +48,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:17:31", 255539)]
         public void DateDiffBySecondsTest(string fromDate, string toDate, int diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Second, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Second, DateTime.Parse(toDate)));
         }
 
         [Theory]
@@ -59,7 +60,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:17:31", 255539000)]
         public void DateDiffByMilliSecondsTest(string fromDate, string toDate, int diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Millisecond, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Millisecond, DateTime.Parse(toDate)));
         }
 
         [Theory]
@@ -71,7 +72,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2019 09:17:31", 2555390000000)]
         public void DateDiffByTicksTest(string fromDate, string toDate, double diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<double>(DateInterval.Tick, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<double>(DateInterval.Tick, DateTime.Parse(toDate)));
         }
         
         [Theory]
@@ -88,7 +89,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/03/2019 09:17:31", 2)]
         public void DateDiffByMonthsTest(string fromDate, string toDate, double diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<double>(DateInterval.Month, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<double>(DateInterval.Month, DateTime.Parse(toDate)));
         }
 
         [Theory]
@@ -105,7 +106,7 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("17/01/2019 10:18:32", "20/01/2021 09:17:31", 2)]
         public void DateDiffByYearsTest(string fromDate, string toDate, double diff)
         {
-            Assert.Equal(diff, DateTime.Parse(fromDate).DateDiff<int>(DateInterval.Year, DateTime.Parse(toDate)));
+            Assert.Equal(diff, DateTime.Parse(fromDate, new CultureInfo("pt-BR")).DateDiff<int>(DateInterval.Year, DateTime.Parse(toDate)));
         }
     }
 }

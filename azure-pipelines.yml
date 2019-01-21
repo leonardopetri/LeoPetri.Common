@@ -14,17 +14,17 @@ steps:
     dotnet build
     dotnet test tests/LeoPetri.Common.Functions.UnitTest --logger trx
 
-  displayName: 'build and test LeoPetri.Common.Functions'
+  displayName: 'Build And Test LeoPetri.Common.Functions'
   
 - task: PublishTestResults@2
   condition: succeededOrFailed()
-  displayName: 'publish tests'
+  displayName: 'Publish Tests Results'
   inputs:
     testRunner: VSTest
     testResultsFiles: '**/**/*.trx'
     
 - task: DotNetCoreCLI@2
-  displayName: 'dotnet pack Common.Functions'
+  displayName: 'Dotnet Pack Common.Functions'
   inputs:
     command: pack
     packagesToPack: src/LeoPetri.Common.Functions/LeoPetri.Common.Functions.csproj
@@ -32,7 +32,7 @@ steps:
     versionEnvVar: PreReleaseVersion
     
 - task: NuGetCommand@2
-  displayName: 'NuGet push Common'
+  displayName: 'NuGet Push Common.Functions'
   continueOnError: true
   inputs:
     command: push
