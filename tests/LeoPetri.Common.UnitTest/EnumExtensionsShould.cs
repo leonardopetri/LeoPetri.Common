@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using Xunit;
 
-namespace LeoPetri.Common.Functions.UnitTest
+namespace LeoPetri.Common.Extensions.UnitTest
 {
     public class EnumExtensionsShould
     {

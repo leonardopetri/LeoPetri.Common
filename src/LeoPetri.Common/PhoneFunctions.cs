@@ -1,4 +1,6 @@
-﻿namespace LeoPetri.Common.Functions
+﻿using LeoPetri.Common.Extensions;
+
+namespace LeoPetri.Common.Functions
 {
     public static class PhoneFunctions
     {

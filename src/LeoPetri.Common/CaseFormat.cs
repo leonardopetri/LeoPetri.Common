@@ -1,4 +1,4 @@
-﻿namespace LeoPetri.Common.Functions
+﻿namespace LeoPetri.Common
 {
     public enum CaseFormat
     {

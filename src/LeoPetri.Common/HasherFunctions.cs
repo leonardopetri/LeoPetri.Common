@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LeoPetri.Common.Functions
 {
-    public static class Hasher
+    public static class HasherFunctions
     {
         public static string GetHash(string value, Guid? guid = null)
         {

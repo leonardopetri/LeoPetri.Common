@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using Xunit;
 
-namespace LeoPetri.Common.Functions.UnitTest
+namespace LeoPetri.Common.Extensions.UnitTest
 {
     public class StringExtensionsShould
     {

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using LeoPetri.Common.Extensions;
+using System.Text;
 
 namespace LeoPetri.Common.Functions
 {

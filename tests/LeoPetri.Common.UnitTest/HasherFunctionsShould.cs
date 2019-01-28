@@ -3,7 +3,7 @@ using Xunit;
 
 namespace LeoPetri.Common.Functions.UnitTest
 {
-    public class HasherShould
+    public class HasherFunctionsShould
     {
         [Theory]
         [InlineData("Passwaord")]
@@ -12,12 +12,12 @@ namespace LeoPetri.Common.Functions.UnitTest
         [InlineData("h8!2GJ!6`DBX?k5g")]
         public void BeValid(string password)
         {
-            var hash = Hasher.GetHash(password);
-            Assert.True(Hasher.IsMatch(hash, password));
+            var hash = HasherFunctions.GetHash(password);
+            Assert.True(HasherFunctions.IsMatch(hash, password));
 
             var guid = Guid.NewGuid();
-            hash = Hasher.GetHash(password, guid);
-            Assert.True(Hasher.IsMatch(hash, password, guid));
+            hash = HasherFunctions.GetHash(password, guid);
+            Assert.True(HasherFunctions.IsMatch(hash, password, guid));
         }
 
         [Theory]
@@ -29,8 +29,8 @@ namespace LeoPetri.Common.Functions.UnitTest
         {
             var guid1 = Guid.NewGuid();
             var guid2 = Guid.NewGuid();
-            var hash = Hasher.GetHash(password, guid1);
-            Assert.False(Hasher.IsMatch(hash, password, guid2));
+            var hash = HasherFunctions.GetHash(password, guid1);
+            Assert.False(HasherFunctions.IsMatch(hash, password, guid2));
         }
     }
 }

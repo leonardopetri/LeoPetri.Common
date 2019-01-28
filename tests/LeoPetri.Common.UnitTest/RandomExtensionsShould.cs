@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using LeoPetri.Common.Functions;
+using System;
 using Xunit;
 
-namespace LeoPetri.Common.Functions.UnitTest
+namespace LeoPetri.Common.Extensions.UnitTest
 {
     public class RandomExtensionsShould
     {

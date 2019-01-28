@@ -2,7 +2,7 @@
 using System.Globalization;
 using Xunit;
 
-namespace LeoPetri.Common.Functions.UnitTest
+namespace LeoPetri.Common.Extensions.UnitTest
 {
     public class DateExtensionsShould
     {

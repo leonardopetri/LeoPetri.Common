@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Linq;
 
-namespace LeoPetri.Common.Functions
+namespace LeoPetri.Common.Extensions
 {
     public static class EnumExtensions
     {
