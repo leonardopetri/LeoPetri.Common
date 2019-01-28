@@ -12,9 +12,9 @@ trigger:
 steps:
 - script: |
     dotnet build
-    dotnet test tests/LeoPetri.Common.Functions.UnitTest --logger trx
+    dotnet test tests/LeoPetri.Common.UnitTest --logger trx
 
-  displayName: 'Build And Test LeoPetri.Common.Functions'
+  displayName: 'Build And Test LeoPetri.Common'
   
 - task: PublishTestResults@2
   condition: succeededOrFailed()
@@ -24,15 +24,15 @@ steps:
     testResultsFiles: '**/**/*.trx'
     
 - task: DotNetCoreCLI@2
-  displayName: 'Dotnet Pack Common.Functions'
+  displayName: 'Dotnet Pack Common'
   inputs:
     command: pack
-    packagesToPack: src/LeoPetri.Common.Functions/LeoPetri.Common.Functions.csproj
+    packagesToPack: src/LeoPetri.Common/LeoPetri.Common.csproj
     versioningScheme: byEnvVar
     versionEnvVar: PreReleaseVersion
     
 - task: NuGetCommand@2
-  displayName: 'NuGet Push Common.Functions'
+  displayName: 'NuGet Push Common'
   continueOnError: true
   inputs:
     command: push
