@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Functions", "src\LeoPetri.Common.Functions\LeoPetri.Common.Functions.csproj", "{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common", "src\LeoPetri.Common\LeoPetri.Common.csproj", "{71F03906-26C0-43EC-B4C3-6FEE0BFC3305}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.Functions.UnitTest", "tests\LeoPetri.Common.Functions.UnitTest\LeoPetri.Common.Functions.UnitTest.csproj", "{DCDA1409-630F-48B5-90AB-838144A6DAE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeoPetri.Common.UnitTest", "tests\LeoPetri.Common.UnitTest\LeoPetri.Common.UnitTest.csproj", "{DCDA1409-630F-48B5-90AB-838144A6DAE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F791E570-A1A5-4C9A-9BCB-5D315FD2A11E}"
 EndProject
